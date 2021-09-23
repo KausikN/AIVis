@@ -1,0 +1,7 @@
+{
+    "repo_name": "AIVis",
+    "requirements": [
+        "streamlit",
+        "opencv-python-headless"
+    ]
+}

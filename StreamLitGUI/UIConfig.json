@@ -1,0 +1,10 @@
+{
+    "PROJECT_NAME": "AIVis",
+    "PROJECT_LINK": "https://github.com/KausikN/AIVis",
+
+    "PROJECT_DESC": "A python visualiser and tool for ML/AI Algorithms, Datasets and more!",
+
+    "PROJECT_README": "README.md",
+
+    "PROJECT_MODES": ["Upload Dataset", "View Dataset", "Dataset Basic Info"]
+}

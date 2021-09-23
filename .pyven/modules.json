@@ -1,0 +1,43 @@
+{
+    "name": "AIVis",
+    "repoLink": "https://github.com/KausikN/AIVis",
+    "localPath": "E:/Github Codes and Projects/Projects/AIVis",
+    "modules": {
+        "app.py": {
+            "name": "app",
+            "type": "local",
+            "link": "https://github.com/KausikN/AIVis/blob/master/app.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/AIVis",
+            "subDir": "",
+            "dependencies": [
+                "os.py",
+                "streamlit.py",
+                "json.py"
+            ]
+        },
+        "os.py": {
+            "name": "os",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/AIVis",
+            "subDir": "",
+            "dependencies": []
+        },
+        "streamlit.py": {
+            "name": "streamlit",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/AIVis",
+            "subDir": "",
+            "dependencies": []
+        },
+        "json.py": {
+            "name": "json",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/AIVis",
+            "subDir": "",
+            "dependencies": []
+        }
+    }
+}
