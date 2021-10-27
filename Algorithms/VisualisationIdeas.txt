@@ -1,0 +1,13 @@
+Visualisations for Algorithms
+
+########################################################################################################################
+K-Means Clustering
+
+Plot 1) Plot all points with same color
+
+Plot 2) Pick K centers and for every point find the closest center and color it with that center's color
+
+Plot 3) Perform Iterations of K-Means Clustering and keep updating the point colors
+
+This gives a animation of how the clusters change over iterations using colors and points
+########################################################################################################################

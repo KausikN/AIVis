@@ -1,0 +1,30 @@
+Visualise,
+
+1) Unsupervised
+    - K-means                                   : DONE
+    - K-means++                                 : PENDING
+    - DBSCAN                                    : PENDING
+    - Mean-shift                                : PENDING
+    - Spectral clustering                       : PENDING
+    - Agglomerative clustering                  : PENDING
+    - Affinity propagation                      : PENDING
+    - Birch                                     : PENDING
+    - Gaussian mixture                          : PENDING
+    - Hierarchical clustering                   : PENDING
+
+2) Supervised
+    - Generic FNN                               : NETWORK VIS DONE : TRAINING BUGS NEED FIXING
+    - Generic CNN                               : PENDING
+    - Generic RNN                               : PENDING
+    - Generic LSTM                              : PENDING
+    - Generic GRU                               : PENDING
+
+
+
+Functions Visualise,
+
+1) Activation Functions
+    - Sigmoid                                   : FUNC DONE, DERIV PENDING, VIS PENDING
+    - Tanh                                      : FUNC DONE, DERIV PENDING, VIS PENDING
+    - ReLU                                      : FUNC DONE, DERIV PENDING, VIS PENDING
+    - Leaky ReLU                                : FUNC DONE, DERIV PENDING, VIS PENDING
