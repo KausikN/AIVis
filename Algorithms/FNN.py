@@ -214,7 +214,7 @@ funcs = {
     "loss_fn_deriv": LossFunctions.categorical_cross_entropy_error_deriv
 }
 
-savePath = "GeneratedVisualisations/Haha.avi"
+savePath = "Data/GeneratedVisualisations/Haha.avi"
 duration = 1.0
 # Params
 
@@ -227,7 +227,7 @@ network_layers = [X.shape[1]] + network_layers + [Y.shape[1]]
 trained_parameters, history = model(X, Y, network_layers, n_epochs, learning_rate, funcs=funcs)
 
 # Generate Video
-tempSavePath = "GeneratedVisualisations/temp.avi"
+tempSavePath = "Data/GeneratedVisualisations/temp.avi"
 GenerateHistoryVideo(history, tempSavePath, duration)
 
 # Fix Video

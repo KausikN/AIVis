@@ -93,7 +93,7 @@ def GetMode(data, col):
 
 # Driver Code
 # # Params
-# datasetPath = "TestData/Finance.csv"
+# datasetPath = "Data/TestData/Finance.csv"
 # # Params
 
 # # RunCode
