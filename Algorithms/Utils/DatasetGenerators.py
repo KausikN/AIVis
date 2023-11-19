@@ -1,6 +1,6 @@
-'''
+"""
 Data Generators
-'''
+"""
 
 # Imports
 import cv2
@@ -17,7 +17,7 @@ canvas = FigureCanvasAgg(fig)
 
 # Main Functions
 # Plot Functions
-def PlotLabelledData(Dataset, title='', plot=True):
+def PlotLabelledData(Dataset, title="", plot=True):
     '''
     Plots the data with labels.
     '''
@@ -26,18 +26,18 @@ def PlotLabelledData(Dataset, title='', plot=True):
     canvas = FigureCanvasAgg(fig)
     fig.clear()
 
-    X = Dataset['points']
-    labels = Dataset['labels']
-    unique_labels = Dataset['unique_labels']
+    X = Dataset["points"]
+    labels = Dataset["labels"]
+    unique_labels = Dataset["unique_labels"]
     centers = np.array([])
-    if 'centers' in Dataset.keys():
-        centers = Dataset['centers']
+    if "centers" in Dataset.keys():
+        centers = Dataset["centers"]
 
     # Init Plot
     ax = None
     # If 3D
-    if Dataset['dim'] >= 3:
-        ax = plt.axes(projection='3d')
+    if Dataset["dim"] >= 3:
+        ax = plt.axes(projection="3d")
     else:
         ax = plt.axes()
 
@@ -46,21 +46,21 @@ def PlotLabelledData(Dataset, title='', plot=True):
         X_ul = X[labels == ul]
 
         # If 3D
-        if Dataset['dim'] >= 3:
+        if Dataset["dim"] >= 3:
             ax.scatter3D(X_ul[:, 0], X_ul[:, 1], X_ul[:, 2], label=ul)
-        elif Dataset['dim'] == 2:
+        elif Dataset["dim"] == 2:
             ax.scatter(X_ul[:, 0], X_ul[:, 1], label=ul)
-        elif Dataset['dim'] == 1:
+        elif Dataset["dim"] == 1:
             ax.scatter(X_ul[:, 0], np.zeros(X_ul.shape), label=ul)
 
     # Plot Centers
     if centers.shape[0] > 0:
-        centersParams = {'marker': 'x', 'label': 'Centers', 's': 50, 'c': 'black'}
-        if Dataset['dim'] >= 3:
+        centersParams = {"marker": "x", "label": "Centers", "s": 50, "c": "black"}
+        if Dataset["dim"] >= 3:
             ax.scatter3D(centers[:, 0], centers[:, 1], centers[:, 2], **centersParams)
-        elif Dataset['dim'] == 2:
+        elif Dataset["dim"] == 2:
             ax.scatter(centers[:, 0], centers[:, 1], **centersParams)
-        elif Dataset['dim'] == 1:
+        elif Dataset["dim"] == 1:
             ax.scatter(centers[:, 0], np.zeros(centers.shape), **centersParams)
 
     # plt.legend()
@@ -85,14 +85,14 @@ def GenerateRandomBlobs(N, dim, centers, plot=False):
     Dataset = {}
     # Generate random dataset
     X, y = make_blobs(n_samples=N, n_features=dim, centers=centers, random_state=42)
-    Dataset['points'] = np.array(X)
-    Dataset['labels'] = np.array(y)
-    Dataset['unique_labels'] = np.unique(Dataset['labels'])
-    Dataset['dim'] = dim
+    Dataset["points"] = np.array(X)
+    Dataset["labels"] = np.array(y)
+    Dataset["unique_labels"] = np.unique(Dataset["labels"])
+    Dataset["dim"] = dim
 
     # Plot the dataset
     if plot:
-        PlotLabelledData(Dataset, title='Random Blobs')
+        PlotLabelledData(Dataset, title="Random Blobs")
 
     return Dataset
 

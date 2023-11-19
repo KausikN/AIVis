@@ -1,6 +1,6 @@
-'''
+"""
 Simple Fully Connected Neural Network
-'''
+"""
 
 # Imports
 import json
@@ -9,10 +9,10 @@ import numpy as np
 from numpy.lib.npyio import save
 from tqdm import tqdm
 
-from Utils import VideoUtils
-from Utils import NetworkVis
-from FunctionsLibrary import LossFunctions
-from FunctionsLibrary import ActivationFunctions
+from .Utils import VideoUtils
+from .Utils import NetworkVis
+from .FunctionsLibrary import LossFunctions
+from .FunctionsLibrary import ActivationFunctions
 
 # Utils Functions
 def GenerateHistoryVideo(history, savePath, duration=2.0):
@@ -31,10 +31,10 @@ def GenerateHistoryVideo(history, savePath, duration=2.0):
         weights_range = [min(weights_vals), max(weights_vals)]
 
         network = {
-            'nodes': history["nodes"][i],
-            'weights': history["Ws"][i],
-            'node_range': nodes_range,
-            'weight_range': weights_range
+            "nodes": history["nodes"][i],
+            "weights": history["Ws"][i],
+            "node_range": nodes_range,
+            "weight_range": weights_range
         }
         I = NetworkVis.GenerateNetworkImage(network)
         # Is.append(np.array(I, dtype=np.uint8))
@@ -183,7 +183,7 @@ def model(X, Y, layer_sizes, n_epochs, lr, funcs):
             history["loss"].append(loss)
 
         if(i%1 == 0):
-            print(f'EPOCH {i}: {loss}')
+            print(f"EPOCH {i}: {loss}")
 
     return parameters, history
 
