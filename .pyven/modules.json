@@ -241,9 +241,9 @@
         },
         "seaborn.py": {
             "name": "seaborn",
-            "type": "inbuilt",
+            "type": "missing",
             "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
+            "parent_dir": "",
             "sub_dir": "",
             "dependencies": []
         },
