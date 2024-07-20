@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 INPUT_DATA_TYPES = {
     "int": [int, np.int64], 
     "float": [float, np.float64], 
-    "text": [str, np.object]
+    "text": [str, object]
 }
 
 # Main Functions
