@@ -5,5 +5,8 @@
         "AIVis.py",
         "Algorithms/",
         "Data/"
-    ]
+    ],
+    "streamlit": {
+        "link": "https://kausikn-aivis.streamlit.app/"
+    }
 }
