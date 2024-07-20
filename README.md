@@ -14,3 +14,13 @@
     - Goto Choose Project from the left tab dropdown, choose the project and click load and deploy.
     - Then go ahead and use the app! 😃
     - If you want to change to another app, simply click on View Other Projects in top left and choose any other project and load and deploy.
+
+# Visualisations
+## Upload Dataset
+- Upload CSV dataset and view as a table
+
+## View Dataset
+- View a portion of the dataset using the start row and number of rows to display
+
+## Dataset Basic Info
+- View info about the dataset including row count, column count, details about each column like unique values count, categorisable, etc
