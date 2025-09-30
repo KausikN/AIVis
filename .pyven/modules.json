@@ -1,164 +1,24 @@
 {
     "name": "AIVis",
     "repo_link": "https://github.com/KausikN/AIVis",
-    "local_path": "E:/Github Codes and Projects/Projects/AIVis",
+    "local_path": "D:/Github Codes and Projects/Projects/AIVis",
     "modules": {
         "AIVis.py": {
             "name": "AIVis",
             "type": "local",
             "link": "https://github.com/KausikN/AIVis/blob/master/AIVis.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
+            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
             "sub_dir": "",
             "dependencies": [
-                "matplotlib/pyplot.py",
                 "numpy.py",
-                "os.py",
-                "pandas.py",
-                "seaborn.py"
+                "pandas.py"
             ]
-        },
-        "ActivationFunctions.py": {
-            "name": "ActivationFunctions",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "Algorithms/FNN.py": {
-            "name": "FNN",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/Algorithms/FNN.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "Algorithms",
-            "dependencies": [
-                "ActivationFunctions.py",
-                "LossFunctions.py",
-                "NetworkVis.py",
-                "VideoUtils.py",
-                "functools.py",
-                "json.py",
-                "numpy.py",
-                "save.py",
-                "tqdm.py"
-            ]
-        },
-        "Algorithms/FunctionsLibrary/ActivationFunctions.py": {
-            "name": "ActivationFunctions",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/Algorithms/FunctionsLibrary/ActivationFunctions.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "Algorithms/FunctionsLibrary",
-            "dependencies": [
-                "numpy.py"
-            ]
-        },
-        "Algorithms/FunctionsLibrary/LossFunctions.py": {
-            "name": "LossFunctions",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/Algorithms/FunctionsLibrary/LossFunctions.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "Algorithms/FunctionsLibrary",
-            "dependencies": [
-                "numpy.py"
-            ]
-        },
-        "Algorithms/Utils/DatasetGenerators.py": {
-            "name": "DatasetGenerators",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/Algorithms/Utils/DatasetGenerators.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "Algorithms/Utils",
-            "dependencies": [
-                "Figure.py",
-                "FigureCanvasAgg.py",
-                "cv2.py",
-                "make_blobs.py",
-                "matplotlib/pyplot.py",
-                "numpy.py"
-            ]
-        },
-        "Algorithms/Utils/NetworkVis.py": {
-            "name": "NetworkVis",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/Algorithms/Utils/NetworkVis.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "Algorithms/Utils",
-            "dependencies": [
-                "cv2.py",
-                "matplotlib/pyplot.py",
-                "numpy.py"
-            ]
-        },
-        "Algorithms/Utils/VideoUtils.py": {
-            "name": "VideoUtils",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/Algorithms/Utils/VideoUtils.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "Algorithms/Utils",
-            "dependencies": [
-                "Image.py",
-                "cv2.py",
-                "matplotlib/pyplot.py",
-                "numpy.py",
-                "os.py",
-                "subprocess.py",
-                "tqdm.py"
-            ]
-        },
-        "Figure.py": {
-            "name": "Figure",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "FigureCanvasAgg.py": {
-            "name": "FigureCanvasAgg",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "Image.py": {
-            "name": "Image",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "LossFunctions.py": {
-            "name": "LossFunctions",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "NetworkVis.py": {
-            "name": "NetworkVis",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "VideoUtils.py": {
-            "name": "VideoUtils",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
         },
         "app.py": {
             "name": "app",
             "type": "local",
             "link": "https://github.com/KausikN/AIVis/blob/master/app.py",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
+            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
             "sub_dir": "",
             "dependencies": [
                 "AIVis.py",
@@ -167,51 +27,19 @@
                 "streamlit.py"
             ]
         },
-        "cv2.py": {
-            "name": "cv2",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "functools.py": {
-            "name": "functools",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
         "json.py": {
             "name": "json",
             "type": "inbuilt",
             "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
+            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
             "sub_dir": "",
-            "dependencies": []
-        },
-        "make_blobs.py": {
-            "name": "make_blobs",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "matplotlib/pyplot.py": {
-            "name": "pyplot",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "matplotlib",
             "dependencies": []
         },
         "numpy.py": {
             "name": "numpy",
             "type": "inbuilt",
             "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
+            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
             "sub_dir": "",
             "dependencies": []
         },
@@ -219,7 +47,7 @@
             "name": "os",
             "type": "inbuilt",
             "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
+            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
             "sub_dir": "",
             "dependencies": []
         },
@@ -227,23 +55,7 @@
             "name": "pandas",
             "type": "inbuilt",
             "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "save.py": {
-            "name": "save",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "seaborn.py": {
-            "name": "seaborn",
-            "type": "missing",
-            "link": "",
-            "parent_dir": "",
+            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
             "sub_dir": "",
             "dependencies": []
         },
@@ -251,23 +63,7 @@
             "name": "streamlit",
             "type": "inbuilt",
             "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "subprocess.py": {
-            "name": "subprocess",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "tqdm.py": {
-            "name": "tqdm",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "E:/Github Codes and Projects/Projects/AIVis",
+            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
             "sub_dir": "",
             "dependencies": []
         }

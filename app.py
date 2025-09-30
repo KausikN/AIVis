@@ -52,14 +52,23 @@ CACHE = {}
 
 # Util Functions
 def LoadCache():
+    '''
+    Load Cache
+    '''
     global CACHE
     CACHE = json.load(open(CACHE_PATH, "r"))
 
 def SaveCache():
+    '''
+    Save Cache
+    '''
     global CACHE
     json.dump(CACHE, open(CACHE_PATH, "w"), indent=4)
 
 def LoadDefaultDatasets():
+    '''
+    Load Default Datasets
+    '''
     global CACHE
     CACHE["default_datasets"] = []
     for f in os.listdir(DEFAULT_DATASETS_DIR):
@@ -69,10 +78,16 @@ def LoadDefaultDatasets():
     return CACHE["default_datasets"]
 
 def GetFileNames(file_paths):
+    '''
+    Get File Names from File Paths
+    '''
     return [os.path.basename(file_path) for file_path in file_paths]
 
 # Main Functions
 def GenerateDatasetBasicInfo(USERINPUT_DatasetData):
+    '''
+    Generate Basic Dataset Info
+    '''
     Columns = USERINPUT_DatasetData.columns
     ColumnsType = AIVis.GetDatasetTypes(USERINPUT_DatasetData)
     ColumnsDataType = [str(dt) for dt in USERINPUT_DatasetData.dtypes]
@@ -100,6 +115,9 @@ def GenerateDatasetBasicInfo(USERINPUT_DatasetData):
 
 # UI Functions
 def UI_LoadDataset():
+    '''
+    UI - Load Dataset
+    '''
     DefaultDatasetPaths = LoadDefaultDatasets()
     DefaultDatasetNames = GetFileNames(DefaultDatasetPaths)
     DatasetNames = list(DefaultDatasetNames)
@@ -113,6 +131,9 @@ def UI_LoadDataset():
     return USERINPUT_DatasetData, USERINPUT_DatasetChoice
 
 def UI_DatasetDetails(DatasetBasicInfo):
+    '''
+    UI - Dataset Details
+    '''
     st.markdown("## Column Details")
     colSize = (1, 3)
 
@@ -125,6 +146,9 @@ def UI_DatasetDetails(DatasetBasicInfo):
     col2.markdown(str(DatasetBasicInfo["rows_count"]))
 
 def UI_DisplayColumnDetails(DatasetBasicInfo):
+    '''
+    UI - Display Column Details
+    '''
     ColumnsData = DatasetBasicInfo["columns_data"]
     ColumnNames = [c["name"] for c in ColumnsData]
     USERINPUT_ColumnChoice = st.selectbox("Choose a Data Column", ColumnNames)
@@ -191,7 +215,7 @@ def view_dataset():
     # Load Inputs
     USERINPUT_DatasetData, DatasetName = UI_LoadDataset()
 
-    # Display Dataset Rows
+    # Display Outputs
     st.markdown("## " + DatasetName)
     col1, col2 = st.columns(2)
     USERINPUT_DatasetShowRangeStart = col1.number_input("Display Row Start", 0, USERINPUT_DatasetData.shape[0]-1, 0, 1)

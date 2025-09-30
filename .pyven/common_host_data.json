@@ -3,7 +3,6 @@
         "StreamLitGUI/",
         "app.py",
         "AIVis.py",
-        "Algorithms/",
         "Data/"
     ],
     "streamlit": {

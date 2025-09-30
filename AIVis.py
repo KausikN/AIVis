@@ -3,11 +3,8 @@ Visualiser for datasets using python
 """
 
 # Imports
-import os
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 # Main Vars
 INPUT_DATA_TYPES = {

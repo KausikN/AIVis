@@ -2,10 +2,7 @@
     "repo_name": "AIVis",
     "requirements": [
         "streamlit",
-        "opencv-python-headless",
-        "seaborn",
-        "scikit-learn",
-        "pillow",
-        "tqdm"
+        "numpy",
+        "pandas"
     ]
 }

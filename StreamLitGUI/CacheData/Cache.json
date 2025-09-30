@@ -79,6 +79,116 @@
                     "unique_values_count": 121
                 }
             ]
+        },
+        "Finance.csv": {
+            "columns_count": 10,
+            "rows_count": 37080,
+            "columns_data": [
+                {
+                    "name": "Year",
+                    "type": "int",
+                    "dtype": "int64",
+                    "categorizable": true,
+                    "unique_values_count": 8
+                },
+                {
+                    "name": "Industry_aggregation_NZSIOC",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 3
+                },
+                {
+                    "name": "Industry_code_NZSIOC",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 139
+                },
+                {
+                    "name": "Industry_name_NZSIOC",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 119
+                },
+                {
+                    "name": "Units",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 3
+                },
+                {
+                    "name": "Variable_code",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 39
+                },
+                {
+                    "name": "Variable_name",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 41
+                },
+                {
+                    "name": "Variable_category",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 3
+                },
+                {
+                    "name": "Value",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": null,
+                    "unique_values_count": 9295
+                },
+                {
+                    "name": "Industry_code_ANZSIC06",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 121
+                }
+            ]
+        },
+        "Test.csv": {
+            "columns_count": 4,
+            "rows_count": 3,
+            "columns_data": [
+                {
+                    "name": "A",
+                    "type": "int",
+                    "dtype": "int64",
+                    "categorizable": true,
+                    "unique_values_count": 3
+                },
+                {
+                    "name": "B",
+                    "type": "float",
+                    "dtype": "float64",
+                    "categorizable": true,
+                    "unique_values_count": 3
+                },
+                {
+                    "name": "C",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 3
+                },
+                {
+                    "name": "D",
+                    "type": "text",
+                    "dtype": "object",
+                    "categorizable": true,
+                    "unique_values_count": 3
+                }
+            ]
         }
     }
 }
