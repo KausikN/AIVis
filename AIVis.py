@@ -88,7 +88,7 @@ def GetMode(data, col):
     '''
     return data[col].mode()
 
-# Driver Code
+# Run Code
 # # Params
 # datasetPath = "Data/TestData/Finance.csv"
 # # Params
