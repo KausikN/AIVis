@@ -68,7 +68,7 @@
                     "name": "Value",
                     "type": "text",
                     "dtype": "object",
-                    "categorizable": null,
+                    "categorizable": false,
                     "unique_values_count": 9295
                 },
                 {

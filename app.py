@@ -7,7 +7,7 @@ import os
 import json
 import streamlit as st
 
-import AIVis
+from AIVis import *
 
 # Main Vars
 config = json.load(open("./StreamLitGUI/UIConfig.json", "r"))
@@ -43,9 +43,15 @@ def HomePage():
 
 #############################################################################################################################
 # Repo Based Vars
-CACHE_PATH = "StreamLitGUI/CacheData/Cache.json"
-DEFAULT_DATASETS_DIR = "StreamLitGUI/DefaultData/DefaultDatasets/"
-SAVE_DATASET_PATH = "StreamLitGUI/DefaultData/SavedDataset.csv"
+PATHS = {
+    "cache": "StreamLitGUI/CacheData/Cache.json",
+    "default": {
+        "datasets_dir": "StreamLitGUI/DefaultData/DefaultDatasets/",
+    },
+    "save": {
+        "csv": "StreamLitGUI/DefaultData/SavedDataset.csv"
+    }
+}
 
 # Util Vars
 CACHE = {}
@@ -56,14 +62,14 @@ def LoadCache():
     Load Cache
     '''
     global CACHE
-    CACHE = json.load(open(CACHE_PATH, "r"))
+    CACHE = json.load(open(PATHS["cache"], "r"))
 
 def SaveCache():
     '''
     Save Cache
     '''
     global CACHE
-    json.dump(CACHE, open(CACHE_PATH, "w"), indent=4)
+    json.dump(CACHE, open(PATHS["cache"], "w"), indent=4)
 
 def LoadDefaultDatasets():
     '''
@@ -71,10 +77,11 @@ def LoadDefaultDatasets():
     '''
     global CACHE
     CACHE["default_datasets"] = []
-    for f in os.listdir(DEFAULT_DATASETS_DIR):
+    for f in os.listdir(PATHS["default"]["datasets_dir"]):
         if f.endswith(".csv"):
-            CACHE["default_datasets"].append(DEFAULT_DATASETS_DIR + f)
+            CACHE["default_datasets"].append(PATHS["default"]["datasets_dir"] + f)
     SaveCache()
+
     return CACHE["default_datasets"]
 
 def GetFileNames(file_paths):
@@ -89,28 +96,25 @@ def GenerateDatasetBasicInfo(USERINPUT_DatasetData):
     Generate Basic Dataset Info
     '''
     Columns = USERINPUT_DatasetData.columns
-    ColumnsType = AIVis.GetDatasetTypes(USERINPUT_DatasetData)
-    ColumnsDataType = [str(dt) for dt in USERINPUT_DatasetData.dtypes]
-    catThresh = [25, 0.025]
-    ColumnsCategorizable = [AIVis.IsCategorizable(USERINPUT_DatasetData, c, catThresh) for c in USERINPUT_DatasetData.columns]
-    ColumnsUniqueValuesCount = [len(AIVis.GetUniqueValues(USERINPUT_DatasetData, c)) for c in USERINPUT_DatasetData.columns]
-
+    ColumnsType = autodetect_column_types(USERINPUT_DatasetData)
     ColumnsData = []
+
     for i in range(len(Columns)):
-        colData = {
+        c = Columns[i]
+        ColumnsData.append({
             "name": Columns[i],
-            "type": ColumnsType[i],
-            "dtype": ColumnsDataType[i],
-            "categorizable": ColumnsCategorizable[i],
-            "unique_values_count": ColumnsUniqueValuesCount[i]
-        }
-        ColumnsData.append(colData)
+            "type": ColumnsType[c],
+            "dtype": str(USERINPUT_DatasetData.dtypes[i]),
+            "categorizable": is_categorizable(USERINPUT_DatasetData, c, 25, 0.025),
+            "unique_values_count": len(USERINPUT_DatasetData[c].unique())
+        })
 
     DatasetBasicInfo = {
         "columns_count": len(Columns),
         "rows_count": USERINPUT_DatasetData.shape[0],
         "columns_data": ColumnsData
     }
+
     return DatasetBasicInfo
 
 # UI Functions
@@ -121,13 +125,14 @@ def UI_LoadDataset():
     DefaultDatasetPaths = LoadDefaultDatasets()
     DefaultDatasetNames = GetFileNames(DefaultDatasetPaths)
     DatasetNames = list(DefaultDatasetNames)
-    if os.path.exists(SAVE_DATASET_PATH):
-        DatasetNames = ["Uploaded Dataset"] + DatasetNames
+    if os.path.exists(PATHS["save"]["csv"]): DatasetNames = ["Uploaded Dataset"] + DatasetNames
+
     USERINPUT_DatasetChoice = st.sidebar.selectbox("Choose a Dataset", DatasetNames)
     if USERINPUT_DatasetChoice == "Uploaded Dataset":
-        USERINPUT_DatasetData = AIVis.LoadDataset(SAVE_DATASET_PATH)
+        USERINPUT_DatasetData = load_csv(PATHS["save"]["csv"])
     else:
-        USERINPUT_DatasetData = AIVis.LoadDataset(DefaultDatasetPaths[DefaultDatasetNames.index(USERINPUT_DatasetChoice)])
+        USERINPUT_DatasetData = load_csv(DefaultDatasetPaths[DefaultDatasetNames.index(USERINPUT_DatasetChoice)])
+
     return USERINPUT_DatasetData, USERINPUT_DatasetChoice
 
 def UI_DatasetDetails(DatasetBasicInfo):
@@ -196,17 +201,16 @@ def upload_dataset():
 
     # Process Inputs
     if USERINPUT_DatasetData is not None:
-        open(SAVE_DATASET_PATH, "wb").write(USERINPUT_DatasetData.read())
-    elif not os.path.exists(SAVE_DATASET_PATH):
+        open(PATHS["save"]["csv"], "wb").write(USERINPUT_DatasetData.read())
+    elif not os.path.exists(PATHS["save"]["csv"]):
         st.markdown("Upload a dataset :sweat_smile:")
         return
 
-    USERINPUT_DatasetData = AIVis.LoadDataset(SAVE_DATASET_PATH)
+    USERINPUT_DatasetData = load_csv(PATHS["save"]["csv"])
 
     # Display Outputs
     st.markdown("## Uploaded Dataset")
-    if USERINPUT_DatasetData is not None:
-        st.table(USERINPUT_DatasetData.head())
+    if USERINPUT_DatasetData is not None: st.table(USERINPUT_DatasetData.head())
 
 def view_dataset():
     # Title
