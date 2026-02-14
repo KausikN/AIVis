@@ -1,5 +1,3 @@
 streamlit
-numpy
-pandas
 
-git+https://github.com/KausikN/StreamlitCommonUtils.git
+git+https://github.com/KausikN/StreamlitCommonUtils.git[csv]
