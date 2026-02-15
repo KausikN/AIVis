@@ -6,7 +6,7 @@ Visualiser for datasets using python
 import numpy as np
 import pandas as pd
 
-from streamlit_common_utils.csv.csv_utils import *
+from streamlit_common_utils.csv import *
 
 # Main Vars
 INPUT_DATA_TYPES = {
