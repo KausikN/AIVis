@@ -58,7 +58,7 @@ def GenerateDatasetBasicInfo(USERINPUT_DatasetData):
         columns_data.append({
             "name": column_name,
             "type": columns_type[column_name],
-            "dtype": str(USERINPUT_DatasetData.dtypes[i]),
+            "dtype": str(USERINPUT_DatasetData.dtypes[column_name]),
             "categorizable": is_categorizable(USERINPUT_DatasetData, column_name, 25, 0.025),
             "unique_values_count": len(USERINPUT_DatasetData[column_name].unique())
         })
