@@ -4,10 +4,10 @@ Stream lit GUI for hosting AIVis
 
 # Imports
 import os
-import streamlit as st
+
+from streamlit_common_utils.streamlit_common_ui_setup import *
 
 from AIVis import *
-from streamlit_common_utils.streamlit_common_ui_setup import *
 
 # Main Vars
 UI_CONFIG = UIConfig("./StreamLitGUI/UIConfig.json")
