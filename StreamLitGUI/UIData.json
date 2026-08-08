@@ -1,0 +1,11 @@
+{
+    "paths": {
+        "cache": "StreamLitGUI/CacheData/Cache.json",
+        "default": {
+            "datasets_dir": "Data/DefaultDatasets/"
+        },
+        "save": {
+            "csv": "Data/SavedDataset.csv"
+        }
+    }
+}

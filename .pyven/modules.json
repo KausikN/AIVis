@@ -1,71 +1,60 @@
 {
-    "name": "AIVis",
-    "repo_link": "https://github.com/KausikN/AIVis",
-    "local_path": "D:/Github Codes and Projects/Projects/AIVis",
-    "modules": {
-        "AIVis.py": {
-            "name": "AIVis",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/AIVis.py",
-            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": [
-                "numpy.py",
-                "pandas.py"
-            ]
-        },
-        "app.py": {
-            "name": "app",
-            "type": "local",
-            "link": "https://github.com/KausikN/AIVis/blob/master/app.py",
-            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": [
-                "AIVis.py",
-                "json.py",
-                "os.py",
-                "streamlit.py"
-            ]
-        },
-        "json.py": {
-            "name": "json",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "numpy.py": {
-            "name": "numpy",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "os.py": {
-            "name": "os",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "pandas.py": {
-            "name": "pandas",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        },
-        "streamlit.py": {
-            "name": "streamlit",
-            "type": "inbuilt",
-            "link": "",
-            "parent_dir": "D:/Github Codes and Projects/Projects/AIVis",
-            "sub_dir": "",
-            "dependencies": []
-        }
+    "AIVis": {
+        "name": "AIVis",
+        "type": "local",
+        "path": "AIVis.py",
+        "parent_dir": "",
+        "dependencies": []
+    },
+    "app": {
+        "name": "app",
+        "type": "local",
+        "path": "app.py",
+        "parent_dir": "",
+        "dependencies": [
+            "AIVis"
+        ]
+    },
+    "numpy": {
+        "name": "numpy",
+        "type": "inbuilt",
+        "path": "numpy",
+        "parent_dir": "",
+        "dependencies": []
+    },
+    "os": {
+        "name": "os",
+        "type": "inbuilt",
+        "path": "os",
+        "parent_dir": "",
+        "dependencies": []
+    },
+    "pandas": {
+        "name": "pandas",
+        "type": "inbuilt",
+        "path": "pandas",
+        "parent_dir": "",
+        "dependencies": []
+    },
+    "streamlit": {
+        "name": "streamlit",
+        "type": "inbuilt",
+        "path": "streamlit",
+        "parent_dir": "",
+        "dependencies": []
+    },
+    "streamlit_common_utils.csv": {
+        "name": "csv",
+        "type": "inbuilt",
+        "path": "streamlit_common_utils.csv",
+        "parent_dir": "",
+        "dependencies": []
+    },
+    "streamlit_common_utils.streamlit_common_ui_setup": {
+        "name": "streamlit_common_ui_setup",
+        "type": "missing",
+        "path": "streamlit_common_utils.streamlit_common_ui_setup",
+        "parent_dir": "",
+        "dependencies": []
     }
 }

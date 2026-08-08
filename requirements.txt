@@ -1,3 +1,2 @@
-streamlit
-
+# Streamlit Common Dependencies
 git+https://github.com/KausikN/StreamlitCommonUtils.git[csv]

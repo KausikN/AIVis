@@ -1,8 +1,6 @@
 {
     "repo_name": "AIVis",
     "requirements": [
-        "streamlit",
-        "numpy",
-        "pandas"
+        "git+https://github.com/KausikN/StreamlitCommonUtils.git[csv]"
     ]
 }
