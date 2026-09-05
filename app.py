@@ -3,8 +3,6 @@ Stream lit GUI for hosting AIVis
 """
 
 # Imports
-import os
-
 from streamlit_common_utils.streamlit_common_ui_setup import *
 
 from AIVis import *
