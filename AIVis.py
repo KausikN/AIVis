@@ -4,7 +4,6 @@ Visualiser for datasets using python
 
 # Imports
 import numpy as np
-import pandas as pd
 
 from streamlit_common_utils.csv import *
 

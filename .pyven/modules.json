@@ -22,13 +22,6 @@
         "parent_dir": "",
         "dependencies": []
     },
-    "pandas": {
-        "name": "pandas",
-        "type": "inbuilt",
-        "path": "pandas",
-        "parent_dir": "",
-        "dependencies": []
-    },
     "streamlit_common_utils.csv": {
         "name": "csv",
         "type": "inbuilt",
