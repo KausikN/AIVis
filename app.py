@@ -164,7 +164,7 @@ def upload_dataset():
         with open(saved_csv_path, "wb") as file:
             file.write(USERINPUT_DatasetData.read())
     elif not os.path.exists(saved_csv_path):
-        st.markdown("Upload a dataset :sweat_smile:")
+        st.info("Upload a dataset :sweat_smile:")
         return
 
     USERINPUT_DatasetData = load_csv(saved_csv_path)
@@ -200,25 +200,17 @@ def dataset_basic_info():
     # Process Inputs
     dataset_basic_info = {}
     dataset_info_cache = UI_CACHE.get("dataset_basic_info", {})
-    if DatasetName in dataset_info_cache:
-        if st.button("Regenerate Dataset Info"):
-            GeneratedText = st.empty()
-            GeneratedText.markdown("Generating Dataset Info...")
-            dataset_basic_info = GenerateDatasetBasicInfo(USERINPUT_DatasetData)
-            dataset_info_cache[DatasetName] = dataset_basic_info
-            UI_CACHE["dataset_basic_info"] = dataset_info_cache
-            UI_CACHE.save()
-            GeneratedText.markdown("Regenerated Dataset Info!")
-        else:
-            dataset_basic_info = dataset_info_cache[DatasetName]
-    else:
+    
+    if DatasetName not in dataset_info_cache or st.button("Regenerate Dataset Info"):
         GeneratedText = st.empty()
-        GeneratedText.markdown("Generating Dataset Info...")
+        GeneratedText.info("Generating Dataset Info...")
         dataset_basic_info = GenerateDatasetBasicInfo(USERINPUT_DatasetData)
         dataset_info_cache[DatasetName] = dataset_basic_info
         UI_CACHE["dataset_basic_info"] = dataset_info_cache
         UI_CACHE.save()
-        GeneratedText.markdown("Regenerated Dataset Info!")
+        GeneratedText.success("Regenerated Dataset Info!")
+    else:
+        dataset_basic_info = dataset_info_cache[DatasetName]
 
     # Display Outputs
     st.markdown("## Dataset Overview")
