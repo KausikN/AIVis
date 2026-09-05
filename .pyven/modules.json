@@ -22,24 +22,10 @@
         "parent_dir": "",
         "dependencies": []
     },
-    "os": {
-        "name": "os",
-        "type": "inbuilt",
-        "path": "os",
-        "parent_dir": "",
-        "dependencies": []
-    },
     "pandas": {
         "name": "pandas",
         "type": "inbuilt",
         "path": "pandas",
-        "parent_dir": "",
-        "dependencies": []
-    },
-    "streamlit": {
-        "name": "streamlit",
-        "type": "inbuilt",
-        "path": "streamlit",
         "parent_dir": "",
         "dependencies": []
     },
