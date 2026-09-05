@@ -149,7 +149,7 @@ def UI_DisplayColumnDetails(dataset_basic_info):
 
 
 # Repo Based Functions
-def upload_dataset():
+def upload_dataset(**kwargs):
     # Title
     st.header("Upload Dataset")
 
@@ -173,7 +173,7 @@ def upload_dataset():
         st.table(USERINPUT_DatasetData.head())
 
 
-def view_dataset():
+def view_dataset(**kwargs):
     # Title
     st.header("View Dataset")
 
@@ -188,7 +188,7 @@ def view_dataset():
     st.table(USERINPUT_DatasetData.iloc[USERINPUT_DatasetShowRangeStart:USERINPUT_DatasetShowRangeStart + USERINPUT_DatasetShowRangeCount, :])
 
 
-def dataset_basic_info():
+def dataset_basic_info(**kwargs):
     # Title
     st.header("Dataset Basic Info")
 
